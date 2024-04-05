@@ -1,0 +1,44 @@
+@use '../../../styles/vars';
+
+.todo {
+  background-color: vars.$backgroundColor;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: vars.$primary;
+  font-size: 1.3rem;
+  margin: 0.7rem;
+  box-shadow: vars.$box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem;
+  min-width: 18rem;
+
+  p {
+    margin-right: .4rem;
+  }
+
+  &__actions {
+    &--icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      padding: .3rem;
+      &.edit {
+        &:hover {
+          color: rgb(0, 17, 255);
+        }
+      }
+      &.check {
+        &:hover {
+          color: vars.$accent;
+        }
+      }
+      &.delete {
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  
+  }
+}

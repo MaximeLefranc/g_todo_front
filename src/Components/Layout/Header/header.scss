@@ -1,0 +1,24 @@
+@use '../../../styles/vars';
+
+.header {
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    color: vars.$accent;
+    font-size: 16rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 14px black;
+    margin-top: 4.7rem;
+    transform: rotate(326deg);
+  }
+}
+
+.header__svg {
+  margin-top: -9.5rem;
+  width: 100%;
+}

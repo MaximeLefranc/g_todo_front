@@ -1,0 +1,22 @@
+@use 'reset';
+@use 'vars';
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+#root {
+  background-color: vars.$backgroundColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  min-width: 100vh;
+  
+}

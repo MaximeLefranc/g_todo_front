@@ -1,0 +1,16 @@
+@use '../../../styles/vars';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: vars.$backgroundColor;
+    padding: 2rem;
+    font-size: 1rem;
+    color: vars.$accent;
+    width: 100%;
+}
+
+.footer__svg {
+  height: 22rem;
+  width: 100%;
+}
