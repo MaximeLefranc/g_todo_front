@@ -1,0 +1,52 @@
+@use '../../styles/vars';
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: vars.$primary-opa-light;
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: vars.$backgroundColor;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid vars.$accent;
+    font-size: 1.3rem;
+    min-width: 30rem;
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      font-size: 1.5rem;
+
+      li {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        span {
+          font-size: 1.1rem;
+          margin-right: .5rem;
+          font-style: italic;
+        }
+        a {
+          font-size: 1.1rem;
+          color: vars.$accent;
+          &:hover {
+            color: vars.$dark;
+          }
+        }
+        
+      }
+    }
+  }
+}

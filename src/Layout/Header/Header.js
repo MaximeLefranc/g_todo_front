@@ -1,6 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import './header.scss';
 
 export default function Header() {
+  const navigate = useNavigate();
+  const disconectUser = () => {
+    sessionStorage.removeItem('token');
+    return navigate('/login');
+  };
   return (
     <>
       <section className="header__svg">
@@ -16,7 +22,9 @@ export default function Header() {
       </section>
       <section className="header">
         <ul className="header__nav">
-          <li className="header__nav--item"></li>
+          <li className="header__nav--item disconect" onClick={disconectUser}>
+            Déconnexion
+          </li>
           <li className="header__nav--item"></li>
           <li className="header__nav--item"></li>
         </ul>

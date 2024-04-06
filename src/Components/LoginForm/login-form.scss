@@ -1,0 +1,51 @@
+@use '../../styles/vars';
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  
+    label {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+  
+    input {
+      padding: 1rem;
+      border-radius: 0.3rem;
+      border: none;
+      font-size: 1.5rem;
+      width: 23rem;
+  
+      &:focus {
+        border: 1px solid vars.$accent;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: red;
+        margin-top: 0.3rem;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 1rem;
+    border: 1px solid vars.$accent;
+    color: vars.$accent;
+    border-radius: .3rem;
+    align-self: center;
+    margin: 1rem;
+
+    &:hover {
+      background-color: vars.$accent;
+      color: vars.$backgroundColor;
+    } 
+  }
+}

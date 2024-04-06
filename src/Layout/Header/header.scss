@@ -1,4 +1,4 @@
-@use '../../../styles/vars';
+@use '../../styles/vars';
 
 .header {
   position: absolute;
@@ -15,6 +15,21 @@
     text-shadow: 4px 4px 14px black;
     margin-top: 4.7rem;
     transform: rotate(326deg);
+  }
+
+  &__nav {
+    &--item {
+    
+    }
+    &--item.disconect {
+      color: vars.$accent;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        color: vars.$backgroundColor;
+      }
+    }
   }
 }
 
