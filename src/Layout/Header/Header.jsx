@@ -1,10 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import './header.scss';
+import { isLogged } from '../../utils/useRedirectIfLogged';
 
 export default function Header() {
   const navigate = useNavigate();
+  const isConnected = isLogged();
   const disconectUser = () => {
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('id');
+    sessionStorage.removeItem('mail');
     return navigate('/login');
   };
   return (
@@ -22,9 +26,11 @@ export default function Header() {
       </section>
       <section className="header">
         <ul className="header__nav">
-          <li className="header__nav--item disconect" onClick={disconectUser}>
-            Déconnexion
-          </li>
+          {isConnected && (
+            <li className="header__nav--item disconect" onClick={disconectUser}>
+              Déconnexion
+            </li>
+          )}
           <li className="header__nav--item"></li>
           <li className="header__nav--item"></li>
         </ul>

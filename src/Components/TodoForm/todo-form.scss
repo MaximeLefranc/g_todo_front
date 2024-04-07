@@ -9,9 +9,11 @@
   align-items: center;
 
   &__container {
-    display: flex;
-    align-items: center;
-    position: relative;
+    form {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
   }
 
   &__button {

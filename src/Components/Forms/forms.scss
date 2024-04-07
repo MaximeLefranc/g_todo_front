@@ -1,5 +1,14 @@
 @use '../../styles/vars';
-.login__form {
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: vars.$accent;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +26,7 @@
   
     input {
       padding: 1rem;
-      border-radius: 0.3rem;
+      border-radius: 0.5rem;
       border: none;
       font-size: 1.5rem;
       width: 23rem;
@@ -25,13 +34,13 @@
       &:focus {
         border: 1px solid vars.$accent;
       }
+    }
 
-      span {
-        font-size: 0.9rem;
-        color: red;
-        margin-top: 0.3rem;
-        font-style: italic;
-      }
+    span {
+      font-size: 0.9rem;
+      color: red;
+      margin-top: 0.3rem;
+      font-style: italic;
     }
   }
 
@@ -41,11 +50,16 @@
     color: vars.$accent;
     border-radius: .3rem;
     align-self: center;
-    margin: 1rem;
+    margin: 2rem 1rem 1rem 1rem;
 
     &:hover {
       background-color: vars.$accent;
       color: vars.$backgroundColor;
     } 
   }
+}
+
+.input--edit {
+  border: none;
+  border-radius: 0.3rem;
 }

@@ -1,4 +1,4 @@
-import './login-form.scss';
+import './forms.scss';
 
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -22,6 +22,8 @@ export default function LoginForm() {
         })
         .then((response) => {
           sessionStorage.setItem('token', response.data.token);
+          sessionStorage.setItem('id', response.data.data.id);
+          sessionStorage.setItem('mail', response.data.data.mail);
           navigate('/');
         });
     } catch (e) {
@@ -30,9 +32,10 @@ export default function LoginForm() {
   };
 
   return (
-    <section className="login">
-      <form className="login__form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="login__form__group">
+    <section>
+      <h1 className="title">Connexion</h1>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="form__group">
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -44,7 +47,7 @@ export default function LoginForm() {
           />
           {errors.email && <span>{errors.mail.message}</span>}
         </div>
-        <div className="login__form__group">
+        <div className="form__group">
           <label htmlFor="password">Mot de passe</label>
           <input
             id="password"
@@ -56,7 +59,7 @@ export default function LoginForm() {
           />
           {errors.password && <span>{errors.password.message}</span>}
         </div>
-        <button className="login__form__btn">Connexion</button>
+        <button className="form__btn">Connexion</button>
       </form>
     </section>
   );

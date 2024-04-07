@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function useRedirectIfLogged() {
+export function useRedirectIfLogged() {
   const navigate = useNavigate();
   const alreadyLogged = isLogged();
 
@@ -13,8 +13,6 @@ function useRedirectIfLogged() {
   }, [alreadyLogged, navigate]);
 }
 
-function isLogged() {
+export function isLogged() {
   return sessionStorage.getItem('token') ? true : false;
 }
-
-export default useRedirectIfLogged;

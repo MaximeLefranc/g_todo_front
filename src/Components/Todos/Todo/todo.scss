@@ -8,11 +8,19 @@
   font-size: 1.3rem;
   margin: 0.7rem;
   box-shadow: vars.$box-shadow;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0.6rem;
   min-width: 18rem;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .isDone {
+      text-decoration: line-through;
+      color: grey;
+    }
+  }
 
   p {
     margin-right: .4rem;
@@ -20,6 +28,7 @@
 
   &__actions {
     &--icon {
+      color: vars.$primary;
       height: 2.5rem;
       width: 2.5rem;
       padding: .3rem;
@@ -40,5 +49,13 @@
       }
     }
   
+  }
+
+  &__infos {
+    &--date {
+      font-style: italic;
+      font-size: 0.8rem;
+      color: vars.$accent
+    }
   }
 }

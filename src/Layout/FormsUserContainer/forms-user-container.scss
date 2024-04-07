@@ -16,11 +16,12 @@
 
   &__container {
     background-color: vars.$backgroundColor;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 1rem;
     border: 1px solid vars.$accent;
     font-size: 1.3rem;
     min-width: 30rem;
+    box-shadow: vars.$box-shadow;
 
     .nav {
       display: flex;
