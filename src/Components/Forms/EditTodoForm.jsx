@@ -7,6 +7,7 @@ export default function EditTodoForm({
   createdAt,
   editOneTodo,
 }) {
+  const urlApi = process.env.REACT_APP_API_URL;
   const [value, setValue] = useState(content);
 
   const handlerEditTodo = (event) => {
@@ -15,7 +16,7 @@ export default function EditTodoForm({
 
   const handlerSubmitTodo = (event) => {
     event.preventDefault();
-    editOneTodo(value, isDone, createdAt, id);
+    editOneTodo(value, isDone, createdAt, id, urlApi);
   };
 
   return (
