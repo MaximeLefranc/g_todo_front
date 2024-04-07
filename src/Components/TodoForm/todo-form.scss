@@ -1,6 +1,7 @@
 @use '../../styles/vars';
 
 .todoForm {
+  z-index: 12;
   position: absolute;
   top: 10rem;
   left: 50%;

@@ -1,8 +1,9 @@
 @use '../../styles/vars';
 
 .todos {
-  height: 75rem;
-  width: 100rem;
+  max-height: 70rem;
+  min-height: 50rem;
+  width: 121rem;
   background: white;
   position: absolute;
   top: 52%;
@@ -13,6 +14,7 @@
   border: 1px solid vars.$accent;
   border-radius: 1rem;
   padding: 1rem;
+  overflow-x: auto;
 
   &__container {
     width: 100%;
