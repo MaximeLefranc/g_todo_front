@@ -5,6 +5,7 @@ import { useRedirectIfLogged } from '../../utils/useRedirectIfLogged';
 
 export default function Home() {
   useRedirectIfLogged();
+
   return (
     <>
       <TodoForm />

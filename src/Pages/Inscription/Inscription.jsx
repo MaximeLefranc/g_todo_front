@@ -1,10 +1,19 @@
 import FormsUserContainer from '../../Layout/FormsUserContainer/FormsUserContainer';
 import InscriptionForm from '../../Components/Forms/InscriptionForm';
 
-import { useRedirectIfLogged } from '../../utils/useRedirectIfLogged';
+import { useNavigate } from 'react-router-dom';
+
+import { isLogged } from '../../utils/useRedirectIfLogged';
+import { useEffect } from 'react';
 
 export default function Inscription() {
-  useRedirectIfLogged();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLogged()) {
+      return navigate('/');
+    }
+  });
 
   return (
     <FormsUserContainer>
